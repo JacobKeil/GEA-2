@@ -1,17 +1,28 @@
 <script>
   import Navbar from '../components/Navbar.svelte';
-  import Footer from '../components/Footer.svelte';
+  import Modal from '../components/Modal.svelte';
+  import MobileMenu from '../components/MobileMenu.svelte';
+  let isShowingMobile = false;
+
+  function openModal() {
+		isShowingMobile = true;
+	}
 </script>
 
 <section class="main-screen">
-  <Navbar />
+  <Navbar on:openModal={() => isShowingMobile = true} />
   <div class="center-wrapper">
 		<div class="main-wrapper">
 			<slot />
 		</div>
 	</div>
-  <!-- <Footer /> -->
 </section>
+
+{#if isShowingMobile}
+	<Modal on:closeModal={() => isShowingMobile = false}>
+		<MobileMenu on:closeModal={() => isShowingMobile = false}/>
+	</Modal>
+{/if}
 
 <style global>
 	@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
@@ -27,13 +38,14 @@
 		--main-light-blue: #414a57;
 		--main-grey: #393e46;
 		--main-orange: #ee7b17;
-		--sec-orange: #dc61e0;
+		--sec-orange: #fa6bff;
 		--main-off-white: #dbdbdb;
 		--main-light-grey: #bebebe;
 		--main-light-red: #ca4444;
 	}
 
   .main-screen {
+    background-color: rgb(240, 239, 255);
 		min-height: 100vh;
 	}
 
