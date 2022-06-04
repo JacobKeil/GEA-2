@@ -25,7 +25,6 @@
     align-items: center;
     padding: 1rem;
     border-radius: .5rem;
-    background-color: rgba(17, 17, 17, 0.774);
   }
 
   li {

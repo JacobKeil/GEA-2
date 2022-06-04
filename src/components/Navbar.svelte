@@ -3,7 +3,7 @@
   import { fade } from 'svelte/transition';
   import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
-  import banner from '../components/Gaming-addiction.jpg';
+  import banner from '../images/Gaming-addiction.jpg';
 
   let x;
   let y;
@@ -42,7 +42,7 @@
 
 <header style="background-image: url({banner});">
   <div class="center-fixed">
-    <h2>Gaming Disorders</h2>
+    <h2 class="title">Gaming Disorders</h2>
     <div class="social">
       <i class='bx bxl-twitter' on:click={() => {
         window.open("https://twitter.com/jacobkusf", '_blank')
@@ -159,6 +159,10 @@
   }
 
   .bx {
+    font-size: 2rem;
+  }
+
+  .title {
     font-size: 2rem;
   }
 </style>

@@ -3,10 +3,6 @@
   import Modal from '../components/Modal.svelte';
   import MobileMenu from '../components/MobileMenu.svelte';
   let isShowingMobile = false;
-
-  function openModal() {
-		isShowingMobile = true;
-	}
 </script>
 
 <section class="main-screen">

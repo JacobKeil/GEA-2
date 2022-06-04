@@ -27,10 +27,10 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: #000000d8;
+		background: rgba(34, 34, 34, 0.959);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 100;
 	}
-</style>
+</style>          
